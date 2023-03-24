@@ -10,7 +10,7 @@ import SwiftUI
 struct HydraArcheApp: App {
     var body: some Scene {
         DocumentGroup(newDocument: HydraArcheDocument()) { file in
-            ContentView(document: file.$document)
+            ContentView(document: file.fileURL!.path(percentEncoded: false))
         }
     }
 }

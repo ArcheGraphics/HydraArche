@@ -7,25 +7,18 @@
 import SwiftUI
 
 struct ContentView: View {
-    @Binding var document: HydraArcheDocument
-
     let canvas: Canvas
     let renderer: AAPLRenderer
     
-    init(document: Binding<HydraArcheDocument>) {
-        _document = document
+    init(document: String) {
         canvas = Canvas(frame: CGRect())
         renderer = AAPLRenderer(metalKitView: canvas)
         canvas.setRenderer(renderer)
+        
+        renderer.setupScene(document)
     }
     
     var body: some View {
         RenderView(view: canvas)
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView(document: .constant(HydraArcheDocument()))
     }
 }
