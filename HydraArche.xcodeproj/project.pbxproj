@@ -15,6 +15,9 @@
 		3EEB9BA429CD335600744D6E /* HydraArcheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEB9BA329CD335600744D6E /* HydraArcheTests.swift */; };
 		3EEB9BAE29CD335600744D6E /* HydraArcheUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEB9BAD29CD335600744D6E /* HydraArcheUITests.swift */; };
 		3EEB9BB029CD335600744D6E /* HydraArcheUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEB9BAF29CD335600744D6E /* HydraArcheUITestsLaunchTests.swift */; };
+		3EEB9BBF29CD36D600744D6E /* Camera.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3EEB9BBD29CD36D600744D6E /* Camera.mm */; };
+		3EEB9BC329CD373400744D6E /* BlitShaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 3EEB9BC029CD373400744D6E /* BlitShaders.metal */; };
+		3EEB9BC429CD373400744D6E /* Renderer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3EEB9BC229CD373400744D6E /* Renderer.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +51,12 @@
 		3EEB9BA929CD335600744D6E /* HydraArcheUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HydraArcheUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EEB9BAD29CD335600744D6E /* HydraArcheUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HydraArcheUITests.swift; sourceTree = "<group>"; };
 		3EEB9BAF29CD335600744D6E /* HydraArcheUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HydraArcheUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3EEB9BBC29CD36D400744D6E /* Bridging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bridging.h; sourceTree = "<group>"; };
+		3EEB9BBD29CD36D600744D6E /* Camera.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Camera.mm; sourceTree = "<group>"; };
+		3EEB9BBE29CD36D600744D6E /* Camera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Camera.h; sourceTree = "<group>"; };
+		3EEB9BC029CD373400744D6E /* BlitShaders.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = BlitShaders.metal; sourceTree = "<group>"; };
+		3EEB9BC129CD373400744D6E /* Renderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Renderer.h; sourceTree = "<group>"; };
+		3EEB9BC229CD373400744D6E /* Renderer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Renderer.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +107,11 @@
 		3EEB9B8D29CD335300744D6E /* HydraArche */ = {
 			isa = PBXGroup;
 			children = (
+				3EEB9BC029CD373400744D6E /* BlitShaders.metal */,
+				3EEB9BC129CD373400744D6E /* Renderer.h */,
+				3EEB9BC229CD373400744D6E /* Renderer.mm */,
+				3EEB9BBE29CD36D600744D6E /* Camera.h */,
+				3EEB9BBD29CD36D600744D6E /* Camera.mm */,
 				3EEB9B8E29CD335300744D6E /* HydraArcheApp.swift */,
 				3EEB9B9029CD335300744D6E /* HydraArcheDocument.swift */,
 				3EEB9B9229CD335300744D6E /* ContentView.swift */,
@@ -105,6 +119,7 @@
 				3EEB9B9929CD335500744D6E /* Info.plist */,
 				3EEB9B9A29CD335500744D6E /* HydraArche.entitlements */,
 				3EEB9B9629CD335500744D6E /* Preview Content */,
+				3EEB9BBC29CD36D400744D6E /* Bridging.h */,
 			);
 			path = HydraArche;
 			sourceTree = "<group>";
@@ -202,6 +217,7 @@
 				TargetAttributes = {
 					3EEB9B8A29CD335300744D6E = {
 						CreatedOnToolsVersion = 14.2;
+						LastSwiftMigration = 1420;
 					};
 					3EEB9B9E29CD335600744D6E = {
 						CreatedOnToolsVersion = 14.2;
@@ -264,8 +280,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EEB9BC329CD373400744D6E /* BlitShaders.metal in Sources */,
 				3EEB9B8F29CD335300744D6E /* HydraArcheApp.swift in Sources */,
 				3EEB9B9129CD335300744D6E /* HydraArcheDocument.swift in Sources */,
+				3EEB9BBF29CD36D600744D6E /* Camera.mm in Sources */,
+				3EEB9BC429CD373400744D6E /* Renderer.mm in Sources */,
 				3EEB9B9329CD335300744D6E /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -421,6 +440,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = HydraArche/HydraArche.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -429,18 +449,91 @@
 				DEVELOPMENT_TEAM = 4SL5L673UU;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					MACOS,
+					PXR_METAL_SUPPORT_ENABLED,
+					"$(inherited)",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HydraArche/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
+					./third_party/USDInstall/lib,
 				);
+				LIBRARY_SEARCH_PATHS = ./third_party/USDInstall/lib;
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-lusd_usdMedia",
+					"-lusd_usdRi",
+					"-lusd_usdUI",
+					"-lusd_usdUtils",
+					"-lusd_usdPhysics",
+					"-lusd_hdGp",
+					"-lusd_usdProcImaging",
+					"-lusd_usdRiImaging",
+					"-lusd_usdSkelImaging",
+					"-lusd_usdVolImaging",
+					"-lusd_usdAppUtils",
+					"-lusd_usdProc",
+					"-lusd_usdSkel",
+					"-lusd_usdImagingGL",
+					"-lusd_usdHydra",
+					"-lusd_hdx",
+					"-lusd_hdSt",
+					"-lusd_glf",
+					"-lusd_hgiGL",
+					"-lusd_hgiInterop",
+					"-lusd_garch",
+					"-lusd_hgiMetal",
+					"-lusd_hgi",
+					"-lusd_hdsi",
+					"-lusd_usdImaging",
+					"-lusd_usdVol",
+					"-lusd_usdLux",
+					"-lusd_usdShade",
+					"-lusd_sdr",
+					"-lusd_ndr",
+					"-lusd_usdRender",
+					"-lusd_usdGeom",
+					"-lusd_usd",
+					"-lusd_kind",
+					"-lusd_pcp",
+					"-lusd_hio",
+					"-lusd_geomUtil",
+					"-lusd_hdar",
+					"-lusd_hd",
+					"-lusd_sdf",
+					"-lusd_ar",
+					"-lusd_hf",
+					"-lusd_plug",
+					"-lusd_work",
+					"-lusd_cameraUtil",
+					"-lusd_pxOsd",
+					"-lusd_vt",
+					"-lusd_gf",
+					"-lusd_trace",
+					"-lusd_js",
+					"-lusd_tf",
+					"-lusd_arch",
+					"-losdCPU",
+					"-losdGPU",
+					"-ltbb",
+					"$(inherited)",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = archegraphics.HydraArche;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = HydraArche/Bridging.h;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
+				SYSTEM_HEADER_SEARCH_PATHS = (
+					./third_party/USDInstall/include,
+					"$(inherited)",
+				);
+				USE_HEADERMAP = NO;
 			};
 			name = Debug;
 		};
@@ -449,6 +542,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = HydraArche/HydraArche.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -457,18 +551,89 @@
 				DEVELOPMENT_TEAM = 4SL5L673UU;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					MACOS,
+					PXR_METAL_SUPPORT_ENABLED,
+					"$(inherited)",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HydraArche/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
+					./third_party/USDInstall/lib,
 				);
+				LIBRARY_SEARCH_PATHS = ./third_party/USDInstall/lib;
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-lusd_usdMedia",
+					"-lusd_usdRi",
+					"-lusd_usdUI",
+					"-lusd_usdUtils",
+					"-lusd_usdPhysics",
+					"-lusd_hdGp",
+					"-lusd_usdProcImaging",
+					"-lusd_usdRiImaging",
+					"-lusd_usdSkelImaging",
+					"-lusd_usdVolImaging",
+					"-lusd_usdAppUtils",
+					"-lusd_usdProc",
+					"-lusd_usdSkel",
+					"-lusd_usdImagingGL",
+					"-lusd_usdHydra",
+					"-lusd_hdx",
+					"-lusd_hdSt",
+					"-lusd_glf",
+					"-lusd_hgiGL",
+					"-lusd_hgiInterop",
+					"-lusd_garch",
+					"-lusd_hgiMetal",
+					"-lusd_hgi",
+					"-lusd_hdsi",
+					"-lusd_usdImaging",
+					"-lusd_usdVol",
+					"-lusd_usdLux",
+					"-lusd_usdShade",
+					"-lusd_sdr",
+					"-lusd_ndr",
+					"-lusd_usdRender",
+					"-lusd_usdGeom",
+					"-lusd_usd",
+					"-lusd_kind",
+					"-lusd_pcp",
+					"-lusd_hio",
+					"-lusd_geomUtil",
+					"-lusd_hdar",
+					"-lusd_hd",
+					"-lusd_sdf",
+					"-lusd_ar",
+					"-lusd_hf",
+					"-lusd_plug",
+					"-lusd_work",
+					"-lusd_cameraUtil",
+					"-lusd_pxOsd",
+					"-lusd_vt",
+					"-lusd_gf",
+					"-lusd_trace",
+					"-lusd_js",
+					"-lusd_tf",
+					"-lusd_arch",
+					"-losdCPU",
+					"-losdGPU",
+					"-ltbb",
+					"$(inherited)",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = archegraphics.HydraArche;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = HydraArche/Bridging.h;
 				SWIFT_VERSION = 5.0;
+				SYSTEM_HEADER_SEARCH_PATHS = (
+					./third_party/USDInstall/include,
+					"$(inherited)",
+				);
+				USE_HEADERMAP = NO;
 			};
 			name = Release;
 		};
