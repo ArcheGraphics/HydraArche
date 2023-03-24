@@ -9,9 +9,6 @@
 
 #include <pxr/base/gf/frustum.h>
 
-static double const _minFocalLength = 10.0;
-static double const _maxFocalLength = 500.0;
-
 using namespace pxr;
 
 @implementation AAPLCamera {

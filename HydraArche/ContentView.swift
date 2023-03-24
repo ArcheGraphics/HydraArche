@@ -1,17 +1,26 @@
+//  Copyright (c) 2023 Feng Yang
 //
-//  ContentView.swift
-//  HydraArche
-//
-//  Created by yangfengzz on 2023/3/24.
-//
+//  I am making my contributions/submissions to this project solely in my
+//  personal capacity and am not conveying any rights to any intellectual
+//  property of any third parties.
 
 import SwiftUI
 
 struct ContentView: View {
     @Binding var document: HydraArcheDocument
 
+    let canvas: Canvas
+    let renderer: AAPLRenderer
+    
+    init(document: Binding<HydraArcheDocument>) {
+        _document = document
+        canvas = Canvas(frame: CGRect())
+        renderer = AAPLRenderer(metalKitView: canvas)
+        canvas.setRenderer(renderer)
+    }
+    
     var body: some View {
-        TextEditor(text: $document.text)
+        RenderView(view: canvas)
     }
 }
 

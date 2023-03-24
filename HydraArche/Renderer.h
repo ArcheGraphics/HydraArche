@@ -25,4 +25,13 @@
 
 @property(nonnull, nonatomic) AAPLCamera *viewCamera;
 
+// MARK: - Camera Export
+- (void)panByDelta:(float)deltaX
+                  :(float)deltaY;
+
+- (void)rotateByDelta:(float)deltaX
+                     :(float)deltaY;
+
+- (void)zoomByDelta:(float)delta;
+
 @end

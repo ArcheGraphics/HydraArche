@@ -495,4 +495,18 @@ GfFrustum computeFrustum(const GfMatrix4d &cameraTransform,
     [self requestFrame];
 }
 
+- (void)panByDelta:(float)deltaX
+                  :(float)deltaY {
+    [self.viewCamera panByDelta: pxr::GfVec2d(deltaX, deltaY)];
+}
+
+- (void)rotateByDelta:(float)deltaX
+                     :(float)deltaY {
+    [self.viewCamera rotateByDelta: pxr::GfVec2d(deltaX, deltaY)];
+}
+
+- (void)zoomByDelta:(float)delta {
+    [self.viewCamera zoomByDelta: delta];
+}
+
 @end

@@ -18,6 +18,8 @@
 		3EEB9BBF29CD36D600744D6E /* Camera.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3EEB9BBD29CD36D600744D6E /* Camera.mm */; };
 		3EEB9BC329CD373400744D6E /* BlitShaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 3EEB9BC029CD373400744D6E /* BlitShaders.metal */; };
 		3EEB9BC429CD373400744D6E /* Renderer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3EEB9BC229CD373400744D6E /* Renderer.mm */; };
+		3EEB9BC629CD3A2E00744D6E /* Canvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEB9BC529CD3A2E00744D6E /* Canvas.swift */; };
+		3EEB9BC929CD3F3600744D6E /* RenderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEB9BC829CD3F3600744D6E /* RenderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		3EEB9BC029CD373400744D6E /* BlitShaders.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = BlitShaders.metal; sourceTree = "<group>"; };
 		3EEB9BC129CD373400744D6E /* Renderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Renderer.h; sourceTree = "<group>"; };
 		3EEB9BC229CD373400744D6E /* Renderer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Renderer.mm; sourceTree = "<group>"; };
+		3EEB9BC529CD3A2E00744D6E /* Canvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Canvas.swift; sourceTree = "<group>"; };
+		3EEB9BC829CD3F3600744D6E /* RenderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,9 +116,11 @@
 				3EEB9BC229CD373400744D6E /* Renderer.mm */,
 				3EEB9BBE29CD36D600744D6E /* Camera.h */,
 				3EEB9BBD29CD36D600744D6E /* Camera.mm */,
-				3EEB9B8E29CD335300744D6E /* HydraArcheApp.swift */,
-				3EEB9B9029CD335300744D6E /* HydraArcheDocument.swift */,
+				3EEB9BC529CD3A2E00744D6E /* Canvas.swift */,
+				3EEB9BC829CD3F3600744D6E /* RenderView.swift */,
 				3EEB9B9229CD335300744D6E /* ContentView.swift */,
+				3EEB9B9029CD335300744D6E /* HydraArcheDocument.swift */,
+				3EEB9B8E29CD335300744D6E /* HydraArcheApp.swift */,
 				3EEB9B9429CD335500744D6E /* Assets.xcassets */,
 				3EEB9B9929CD335500744D6E /* Info.plist */,
 				3EEB9B9A29CD335500744D6E /* HydraArche.entitlements */,
@@ -280,11 +286,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EEB9BC629CD3A2E00744D6E /* Canvas.swift in Sources */,
 				3EEB9BC329CD373400744D6E /* BlitShaders.metal in Sources */,
 				3EEB9B8F29CD335300744D6E /* HydraArcheApp.swift in Sources */,
 				3EEB9B9129CD335300744D6E /* HydraArcheDocument.swift in Sources */,
 				3EEB9BBF29CD36D600744D6E /* Camera.mm in Sources */,
 				3EEB9BC429CD373400744D6E /* Renderer.mm in Sources */,
+				3EEB9BC929CD3F3600744D6E /* RenderView.swift in Sources */,
 				3EEB9B9329CD335300744D6E /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
